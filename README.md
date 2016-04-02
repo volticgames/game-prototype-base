@@ -18,21 +18,11 @@ Then, in Flashbuilder, open the Project Properties (Project -> Properties) and t
 
 ### Volticpunk
 
-Volticpunk is checked into the repository even though that's bad practice because fuck Adobe.
+Volticpunk is included as a submodule, make sure to do a deep clone.
 
 ### Gameanalytics
 
 Gameanalytics is checked into the repository even though that's bad practice because fuck Adobe.
-
-### AIRControl
-
-AIRControl is an extension that enables gamepad support on Mac OS X and Windows. Download it from https://github.com/AlexanderOMara/AIRControl as a `.zip` and keep it somewhere safe. Extract the zip, we'll be referencing a few files from it.
-
-In Flashbuilder open the Project Properties (Project -> Properties) and then "Actionscript Build Path". Open the "Library Path" tab and click "Add SWC", navigate to where you downloaded AIRControl and select the SWC from `native_extension/AIRControl/bin/AIRControl.swc`. Then open the `Native Extensions` tab and click "Add ANE", navigate to the AIRControl folder again and select `native_extension/AIRControl/ane/AIRControl.ane`.
-
-Now open the "Actionscript Build Packaging" section of the Project Properties and select the "Native Extensions" tab. You should see an entry for AIRControl with an "X" next to it. There is a column labeled "Package", for me there is a black box there that should actually be a checkbox. Click this to enable the extension and the "X" should become a tick.
-
-See adding an ANE: http://help.adobe.com/en_US/flashbuilder/using/WSe4e4b720da9dedb5-2e7310a1136ab7c1811-8000.html
 
 # Assets
 
@@ -44,7 +34,7 @@ Once all this is set up, you can generate assets using `gulp assets`. This will 
 
 You can also update entities manually with `gulp entities` and pack assets with `gulp pack`.
 
-NOTE: `gulp pack` requires ASEprite to be installed in your Applications folder.
+NOTE: `gulp pack` requires ASEprite to be installed in your Applications folder. (Mac only!)
 
 ## Linking Assets from Dropbox
 
