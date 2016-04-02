@@ -1,0 +1,22 @@
+{
+  "name": "Proof",
+  "version": "1.0.0",
+  "description": "Proof is a dope game",
+  "main": " ",
+  "scripts": {
+    "build": "gulp pack && gulp assets"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bfollington@bitbucket.org/bfollington/proof-new.git"
+  },
+  "author": "Ben Follington, Ricky James",
+  "license": "Closed",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-filenames": "^2.0.0",
+    "gulp-shell": "^0.4.0",
+    "gulp-watch": "^4.2.0",
+    "lodash": "^4.5.1"
+  }
+}
