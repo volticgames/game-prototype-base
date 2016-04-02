@@ -28,10 +28,10 @@
 
 		public static var windowChrome: Point;
 
-		public static const FRAMERATE: uint = 60;
+		public static const FRAMERATE: uint = 30;
 
 		public function Main () {
-			super(C.WIDTH, C.HEIGHT, FRAMERATE, false);
+			super(C.WIDTH, C.HEIGHT, FRAMERATE, true);
 
             stage.frameRate = FRAMERATE;
 			stage.quality = StageQuality.LOW;
@@ -47,6 +47,34 @@
 			setInputDefinitions();
 
             trace("Running from " + File.applicationDirectory.nativePath);
+		}
+
+		override public function update(): void {
+			super.update();
+
+			if (Input.pressed(Key.F5)) {
+				Main.changeResolution(640, 360);
+			}
+
+			if (Input.pressed(Key.F6)) {
+				Main.changeResolution(1280, 720);
+			}
+
+			if (Input.pressed(Key.F7)) {
+				Main.changeResolution(1440, 810);
+			}
+
+			if (Input.pressed(Key.F8)) {
+				Main.changeResolution(1680, 945);
+			}
+
+			if (Input.pressed(Key.F9)) {
+				Main.changeResolution(1920, 1080);
+			}
+
+			if (Input.pressed(Key.F10)) {
+				Main.enterFullscreen();
+			}
 		}
 
 		override public function init():void {
